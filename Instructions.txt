@@ -1,11 +1,13 @@
+##This spider crawls on https://www.theguardian.com/au and creates items.josn file in the structure          {title:xxx,article:xxx,content:xxx}
+
 1)Run this project from :projectlocation/SCRAPY/FirstSpider 
 2)command to run :scrapy crawl guardian_spider -o items.json
-3)If you want to load the data into MongoDB instead of creating items.json file follow below instructions:
-        ** Remove the comments in settings.py file from the line  xxx to xxx.
+3)Output file which contains Title,url and content of each article is placed in this repository location :SCRAPY/FirstSpider/FirstSpider/items.json
+4)If you want to load the data into MongoDB instead of creating items.json file follow below instructions:
+        ** Remove the comments in settings.py file from the line  101 to 108.
         ** use the command==> scrapy crawl guardian_spider
         **Due to some SSL issue ,i am getting Authentication Failed ,thats the reason i've loaded data into a json file
         **Will resolve the issues ASAP.
-4)Output file which contains Title,url and content of each article is placed in this repository :SCRAPY/FirstSpider/FirstSpider/items.json
   
 5)Hosting MONGODB on COMPOSE:
  
