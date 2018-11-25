@@ -21,3 +21,4 @@ MONGODB_COLLECTION = "news_content"
 MONGODB_URL="mongodb://arun:"+urllib.parse.quote("********")+"
 @portal-ssl1698-2.scrapy-mongodb-arun.2313722141.composedb.com:18439,portal-ssl1447-1.scrapy-mongodb-arun.2313722141.composedb.com:18439/compose?authSource=admin&ssl=true"
          
+6)Once we have the data in MongoDB or ElasticSearch or someother service,we have the flask module to make our code as API.
