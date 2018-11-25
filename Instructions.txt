@@ -1,0 +1,21 @@
+1)Run this project from :projectlocation/SCRAPY/FirstSpider 
+2)command to run :scrapy crawl guardian_spider -o items.json
+3)If you want to load the data into MongoDB instead of creating items.json file follow below instructions:
+        ** Remove the comments in settings.py file from the line  xxx to xxx.
+        ** use the command==> scrapy crawl guardian_spider
+        **Due to some SSL issue ,i am getting Authentication Failed ,thats the reason i've loaded data into a json file
+        **Will resolve the issues ASAP.
+4)Output file which contains Title,url and content of each article is placed in this repository :SCRAPY/FirstSpider/FirstSpider/items.json
+  
+5)Hosting MONGODB on COMPOSE:
+ 
+ *I have hosted mongoDB on my COMPOSE server with all the necessary configurations and created a database and a collection 
+ used the same in settings.py.But somehow getting authentication failed .
+ 
+MONGODB_PORT = 18439
+MONGODB_DB = "news_articles"
+MONGODB_COLLECTION = "news_content"
+#===below password can be encrypted and in the decrypted using decode64
+MONGODB_URL="mongodb://arun:"+urllib.parse.quote("********")+"
+@portal-ssl1698-2.scrapy-mongodb-arun.2313722141.composedb.com:18439,portal-ssl1447-1.scrapy-mongodb-arun.2313722141.composedb.com:18439/compose?authSource=admin&ssl=true"
+         
